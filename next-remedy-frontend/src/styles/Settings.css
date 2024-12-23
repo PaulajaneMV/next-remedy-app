@@ -1,0 +1,120 @@
+.page-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.page-layout.minimized .settings-content {
+  margin-left: 100px;
+}
+
+.settings-header {
+  background: #37d9ee;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  height: 35px; /* Fixed height for the header */
+  width: calc(100% - 270px); /* Default sidebar width subtracted */
+  margin-left: 230px; /* Default sidebar margin */
+  transition: margin-left 0.3s ease, width 0.3s ease; /* Smooth adjustment */
+  z-index: 10; /* Keeps header above other content */
+}
+
+.page-layout.minimized .settings-header {
+  width: calc(100% - 140px); /* Adjust width for minimized sidebar */
+  margin-left: 100px; /* Adjust margin for minimized sidebar */
+}
+
+.settings-header .user-profile {
+  display: flex;
+  align-items: center;
+}
+
+.settings-header .user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.settings-content {
+  flex: 1;
+  margin-top: 60px;
+  margin-left: 250px; /* Default sidebar width */
+  padding: 20px;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tab {
+  background: #f0f0f0;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #555;
+  transition: background 0.3s ease;
+}
+
+.tab:hover {
+  background: #e0e0e0;
+}
+
+.tab.active {
+  background: #37d9ee;
+  color: white;
+}
+
+.tab-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tab-content h2 {
+  color: #37d9ee;
+}
+
+.save-btn {
+  background: #37d9ee;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.save-btn:hover {
+  background: #2cbad6;
+}
+
+.settings-footer {
+  text-align: center;
+  padding: 5px 0;
+  background: #000;
+  color: #fff;
+  font-size: 0.9rem;
+  position: fixed; /* Make footer stick to the bottom */
+  bottom: 0;
+  width: calc(100% - 230px); /* Default sidebar width subtracted */
+  margin-left: 230px; /* Default sidebar margin */
+  transition: margin-left 0.3s ease, width 0.3s ease; /* Smooth adjustment */
+  z-index: 10; /* Keep footer above other content */
+}
+
+.page-layout.minimized .settings-footer {
+  width: calc(100% - 100px); /* Adjust width for minimized sidebar */
+  margin-left: 100px; /* Adjust margin for minimized sidebar */
+}

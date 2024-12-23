@@ -1,0 +1,169 @@
+/* General Layout */
+.page-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Adjust content margin for minimized and maximized sidebar */
+.page-layout.minimized .analytics-content {
+  margin-left: 100px; /* Adjusted for minimized sidebar */
+}
+
+.analytics-content {
+  flex: 1;
+  margin-left: 250px; /* Default sidebar width */
+  padding: 20px;
+  overflow-y: auto;
+  transition: margin-left 0.3s ease;
+}
+
+/* Header */
+.analytics-header {
+  background: #37d9ee;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  height: 35px; /* Fixed height for the header */
+  width: calc(100% - 270px); /* Default sidebar width subtracted */
+  margin-left: 230px; /* Default sidebar margin */
+  transition: margin-left 0.3s ease, width 0.3s ease;
+  z-index: 10;
+}
+
+.page-layout.minimized .analytics-header {
+  width: calc(100% - 140px); /* Adjust width for minimized sidebar */
+  margin-left: 100px; /* Adjust margin for minimized sidebar */
+}
+
+.analytics-header h1 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.analytics-header .user-profile {
+  display: flex;
+  align-items: center;
+}
+
+.analytics-header .user-profile span {
+  margin-right: 10px;
+}
+
+.analytics-header .user-avatar {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+
+/* Footer */
+.analytics-footer {
+  text-align: center;
+  padding: 5px 0;
+  background: #000;
+  color: #fff;
+  font-size: 0.9rem;
+  position: fixed;
+  bottom: 0;
+  width: calc(100% - 230px); /* Default sidebar width subtracted */
+  margin-left: 230px; /* Default sidebar margin */
+  transition: margin-left 0.3s ease, width 0.3s ease;
+  z-index: 10;
+}
+
+.page-layout.minimized .analytics-footer {
+  width: calc(100% - 100px); /* Adjust width for minimized sidebar */
+  margin-left: 100px; /* Adjust margin for minimized sidebar */
+}
+
+/* Overview Section */
+.overview-section {
+  margin-top: 50px; /* Add space for fixed header */
+  margin-bottom: 30px;
+}
+
+.stats-grid {
+  display: flex;
+  gap: 20px;
+}
+
+.stat-card {
+  flex: 1;
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-card h3 {
+  color: #37d9ee;
+  margin-bottom: 10px;
+}
+
+.stat-card p {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Charts Section */
+.charts-section {
+  margin-bottom: 30px;
+}
+
+.charts {
+  display: flex;
+  gap: 20px;
+}
+
+.chart {
+  flex: 1;
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.chart h3 {
+  color: #37d9ee;
+  margin-bottom: 10px;
+}
+
+/* Recent Reports Section */
+.recent-reports {
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.recent-reports h2 {
+  color: #37d9ee;
+  margin-bottom: 15px;
+}
+
+.recent-reports ul {
+  list-style: none;
+  padding: 0;
+}
+
+.recent-reports li {
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.recent-reports li:last-child {
+  border-bottom: none;
+}

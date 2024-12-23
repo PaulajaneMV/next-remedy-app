@@ -1,0 +1,180 @@
+/* Layout Adjustments */
+.page-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.page-layout.minimized .campaigns-content {
+  margin-left: 100px;
+}
+
+.campaigns-content {
+  flex: 1;
+  margin-left: 250px;
+  padding: 20px;
+  overflow-y: auto;
+  transition: margin-left 0.3s ease;
+}
+
+/* Header */
+.campaigns-header {
+  background: #37d9ee;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  height: 35px;
+  width: calc(100% - 270px);
+  margin-left: 230px;
+  z-index: 10;
+  transition: margin-left 0.3s ease, width 0.3s ease;
+}
+
+.page-layout.minimized .campaigns-header {
+  width: calc(100% - 140px);
+  margin-left: 100px;
+}
+
+.create-campaign-btn {
+  background: white;
+  color: #37d9ee;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.create-campaign-btn:hover {
+  background: #2cbad6;
+  color: white;
+}
+
+/* Active Campaigns */
+.active-campaigns {
+  margin-top: 80px;
+  margin-bottom: 30px;
+}
+
+.active-campaigns h2 {
+  color: #37d9ee;
+  margin-bottom: 15px;
+}
+
+.campaign-grid {
+  display: flex;
+  gap: 20px;
+}
+
+.campaign-card {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  flex: 1;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.campaign-card h3 {
+  color: #37d9ee;
+  margin-bottom: 10px;
+}
+
+.progress-bar {
+  background: #e0e0e0;
+  height: 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.progress {
+  background: #37d9ee;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.campaign-actions button {
+  margin: 5px;
+  padding: 5px 10px;
+  background: #37d9ee;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.campaign-actions button:hover {
+  background: #2cbad6;
+}
+
+/* Analytics */
+.campaign-analytics {
+  margin-bottom: 30px;
+}
+
+.analytics-cards {
+  display: flex;
+  gap: 20px;
+}
+
+.analytics-card {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.analytics-card h3 {
+  color: #37d9ee;
+  margin-bottom: 10px;
+}
+
+/* Recent Activities */
+.recent-activities h2 {
+  color: #37d9ee;
+  margin-bottom: 15px;
+}
+
+.recent-activities ul {
+  list-style: none;
+  padding: 0;
+}
+
+.recent-activities li {
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.recent-activities li:last-child {
+  border-bottom: none;
+}
+
+/* Archived Campaigns */
+.archived-campaigns h2 {
+  color: #37d9ee;
+  margin-bottom: 10px;
+}
+
+/* Footer */
+.campaigns-footer {
+  text-align: center;
+  padding: 5px 0;
+  background: black;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  width: calc(100% - 230px);
+  margin-left: 230px;
+  transition: margin-left 0.3s ease, width 0.3s ease;
+}
+
+.page-layout.minimized .campaigns-footer {
+  width: calc(100% - 100px);
+  margin-left: 100px;
+}
